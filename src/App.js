@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import MainPageNews from "./views/MainPageNews";
+import News from "./views/News";
+import NewDetails from "./views/NewDetails";
+import FormSignIn from "./views/FormSignIn";
+import FormRegistration from "./views/FormRegistration";
+import NotFound from "./views/NotFoundPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/"><MainPageNews /></Route>
+                <Route path="/news"><News /></Route>
+                <Route path="/details/:id"><NewDetails /></Route>
+                <Route path="/signin"><FormSignIn /></Route>
+                <Route path="/registration"><FormRegistration /></Route>
+                <Route path="*"><NotFound /></Route>
+            </Switch>
+        </BrowserRouter>
+    );
+};
 
 export default App;
