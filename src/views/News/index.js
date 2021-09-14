@@ -10,7 +10,6 @@ const News = () => {
             .then(({data}) => setNews(data))
     }, [])
     return (
-        <Layout>
                 <div className="row">
                         {
                             news.map(el =>
@@ -23,7 +22,6 @@ const News = () => {
                             )
                         }
                 </div>
-        </Layout>
     );
 };
 

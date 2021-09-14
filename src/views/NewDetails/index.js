@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Layout from "../../components/Layout";
 import {useParams} from "react-router-dom";
 import axios from "axios";
 import NotFound from "../NotFoundPage";
@@ -22,7 +21,6 @@ const NewDetails = () => {
         return <NotFound />
     }
     return (
-        <Layout>
             <div className="row">
                 <h2>Detailed information</h2>
                 <div className="row">
@@ -47,7 +45,6 @@ const NewDetails = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
     );
 };
 

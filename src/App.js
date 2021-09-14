@@ -6,10 +6,12 @@ import NewDetails from "./views/NewDetails";
 import FormSignIn from "./views/FormSignIn";
 import FormRegistration from "./views/FormRegistration";
 import NotFound from "./views/NotFoundPage";
+import Layout from "./components/Layout";
 
 const App = () => {
     return (
         <BrowserRouter>
+            <Layout>
             <Switch>
                 <Route exact path="/"><MainPageNews /></Route>
                 <Route path="/news"><News /></Route>
@@ -18,6 +20,7 @@ const App = () => {
                 <Route path="/registration"><FormRegistration /></Route>
                 <Route path="*"><NotFound /></Route>
             </Switch>
+            </Layout>
         </BrowserRouter>
     );
 };

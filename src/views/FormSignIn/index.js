@@ -1,9 +1,7 @@
 import React from 'react';
-import Layout from "../../components/Layout";
 
 const FormSignIn = () => {
     return (
-        <Layout>
             <div className="offset-md-3 mt-4">
                 <div className="col-md-6">
                     <div className="mb-3">
@@ -19,7 +17,6 @@ const FormSignIn = () => {
                     <button type="submit" className="btn btn-warning">Sign in</button>
                 </div>
             </div>
-        </Layout>
     );
 };
 
