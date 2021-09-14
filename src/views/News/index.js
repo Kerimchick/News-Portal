@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Layout from "../../components/Layout";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import NotFound from "../NotFoundPage";
 
 const News = () => {
     const [news, setNews] = useState([])
