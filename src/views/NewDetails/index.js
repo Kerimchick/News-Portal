@@ -2,14 +2,25 @@ import React, {useEffect, useState} from 'react';
 import Layout from "../../components/Layout";
 import {useParams} from "react-router-dom";
 import axios from "axios";
+import NotFound from "../NotFoundPage";
 
 const NewDetails = () => {
     const [newDetails, setNewDetails] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
+    const [notFound, setNotFound] = useState(false)
     let {id} = useParams()
     useEffect(() => {
         axios(`https://611675aa1c592d0017bb7f09.mockapi.io/News/${id}`)
-            .then(({data}) => setNewDetails(data))
+            .then(({data}) => {setNewDetails(data)})
+            .catch(() => {setNotFound(true)})
+            .finally(() => {setIsLoading(false)})
     }, [id])
+    if(isLoading){
+        return "Loading...."
+    }
+    if(notFound){
+        return <NotFound />
+    }
     return (
         <Layout>
             <div className="row">
@@ -26,9 +37,12 @@ const NewDetails = () => {
                     </div>
                     <div>
                         <p>Commentaries</p>
-                        <div className="comment">
-                            <p><textarea rows="10" cols="45" name="text" placeholder="Commentaries"></textarea></p>
-                            <button type="button" className="btn">Send</button>
+                        <div>
+                            <p>
+                                <textarea rows="5" cols="50" name="text" placeholder="Commentaries..." className="rounded">
+                                </textarea>
+                            </p>
+                            <button type="button" className="btn up btn-info down">Send</button>
                         </div>
                     </div>
                 </div>
