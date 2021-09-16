@@ -13,10 +13,10 @@ const Request = () => {
             <table className="table">
                 <thead className="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Имя</th>
-                    <th scope="col">Фамилия</th>
-                    <th scope="col">Username</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone number</th>
+                    <th scope="col">E-mail</th>
                 </tr>
                 </thead>
                 <tbody>
