@@ -7,6 +7,7 @@ import FormSignIn from "./views/FormSignIn";
 import FormRegistration from "./views/FormRegistration";
 import NotFound from "./views/NotFoundPage";
 import Layout from "./components/Layout";
+import Request from "./views/Request";
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/details/:id"><NewDetails /></Route>
                 <Route path="/signin"><FormSignIn /></Route>
                 <Route path="/registration"><FormRegistration /></Route>
+                <Route path="/request"><Request /></Route>
                 <Route path="*"><NotFound /></Route>
             </Switch>
             </Layout>
