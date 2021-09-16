@@ -7,8 +7,6 @@ const NewDetails = () => {
     const [newDetails, setNewDetails] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const [notFound, setNotFound] = useState(false)
-    const [text, setText] = useState("")
-    const [comments, setComments] = useState([])
     let {id} = useParams()
     useEffect(() => {
         axios(`https://611675aa1c592d0017bb7f09.mockapi.io/News/${id}`)
@@ -37,7 +35,6 @@ const NewDetails = () => {
                     </div>
                     <div>
                         <p>Commentaries</p>
-
                         <div>
                             <p>
                                 <textarea rows="5" cols="50" name="text" placeholder="Commentaries..." className="rounded">
