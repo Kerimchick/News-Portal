@@ -50,9 +50,14 @@ a{
 }
 .send-btn{
     padding: 5px 15px;
-    background-color: crimson;
     color: #fff;
     margin-top: 15px;
     margin-left: auto;
+    display: block;
+}
+.send-btn-2{
+    padding: 5px 15px;
+    color: #fff;
+    margin-top: 15px;
     display: block;
 }

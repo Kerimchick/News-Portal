@@ -37,6 +37,7 @@ const Header = () => {
                         <NavLink to="/news" className="link">News</NavLink>
                         <NavLink to="/signin" className="link">Sign In</NavLink>
                         <NavLink to="/registration" className="link">Registration</NavLink>
+                        <NavLink to="/students" className="link text-primary">Students</NavLink>
                         <NavLink to="/request" className="link text-danger">Request</NavLink>
                         <button className="btn btn-primary btn-position" onClick={() => setOpenModal(true)}>Feedback</button>
                     </div>
@@ -48,7 +49,7 @@ const Header = () => {
                             {
                                 sentSuccess ? "Sent successfully" :
                                     <>
-                                        <h2>Lorem</h2>
+                                        <h2>Feedback form</h2>
                                         <form onSubmit={handleSubmit}>
                                             <div className="form-group">
                                                 <label htmlFor="name" className="col-form-label">Name:</label>
