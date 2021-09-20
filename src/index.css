@@ -26,7 +26,7 @@ code {
   background-color: #94a8ce;
 }
 .container{
-  max-width: 1170px;
+  max-width: 1220px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -70,4 +70,9 @@ a{
 .position-form{
     margin: 15px -13px;
 }
-
+.inp-width{
+    width: 70px;
+}
+.inp-width-bg{
+    width: 80px;
+}
